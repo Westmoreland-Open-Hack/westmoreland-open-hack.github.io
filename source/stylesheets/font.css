@@ -1,0 +1,10 @@
+@font-face {
+    font-family: ambrielbold_italic;
+    src: url('fonts/Ambriel-webfont.eot');
+    src: url('fonts/Ambriel-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Ambriel-webfont.woff') format('woff'),
+         url('fonts/Ambriel-webfont.ttf') format('truetype'),
+         url('fonts/Ambriel-webfont.svg#ambrielbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
