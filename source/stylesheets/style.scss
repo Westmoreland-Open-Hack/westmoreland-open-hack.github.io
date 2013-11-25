@@ -1,9 +1,15 @@
 @import "reset";
 @import "bourbon/bourbon";
-//@import "grid-settings";
+@import "grid-settings";
 @import "neat/neat";
 @import "font";
 
+/***********************************************************************************************************
+                                              Body
+************************************************************************************************************/
+body{
+ 
+}
 
 /***********************************************************************************************************
                                               Header
@@ -16,38 +22,59 @@
 }
 
 /***********************************************************************************************************
-                                              Menu
+                                 Menu    rightBox: special, mission, protator
 ************************************************************************************************************/
 aside{
   @include outer-container;
   nav{
-    @include span-columns(3);
     .window{
       width: 100%;
+      float: left;
     }
     .menu{
       text-align: center;
+      font-size: 1.5em;
+      li{
+        padding-top: 10px;
+      }
+    }
+    @include span-columns(3);
+    @include media($mobile){
+      @include span-columns(3);
+      margin-left: auto;
+      margin-right: auto;
+      float: none;
+    }
+  }
+  section{
+    .special{
+      @include span-columns(9);
+      text-align: center;
+      float: left;
+
+      #full-special{display:block;}
+      #mobile-special{display:none;}
+
+      @include media($mobile){
+        #full-special{display:none;}
+        #mobile-special{display:block;}
+        @include span-columns(9);
+      }
+      @include omega();
+    }
+    .mission{
+    @include span-columns(9);
+    text-align: center;
+    @include omega();
+    }
+    .protator{
+      @include span-columns(9);
+      @include omega();
     }
   }
 }
 
-/***********************************************************************************************************
-                                rightBox: special, mission, protator
-************************************************************************************************************/
-section{
-  @include outer-container;
-  .special{
-    @include span-columns(9);
-    text-align: center;
-  }
-  .mission{
-  @include span-columns(9);
-  text-align: center;
-  }
-  .protator{
-    @include span-columns(9);
-  }
-}
+
 
 /***********************************************************************************************************
                                             Main Content
@@ -58,7 +85,16 @@ main{
   .storerotator{
 
   }
+  h1{
+  text-align: center;
+  font-size: 2em;
+  }
+  .story{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
+
 
 
 /***********************************************************************************************************
@@ -70,8 +106,10 @@ footer{
 
 .leftCol{
   float:left;
+  padding-left: 25px;
 }
 
 .rightCol{
   float:right;
+  padding-right: 25px;
 }
