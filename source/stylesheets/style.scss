@@ -102,8 +102,9 @@ section{
     .statement{
       padding: 20px 15px 0px 15px;
     }
-    margin-top: 5.1em;
-    padding-top: 25px;
+    padding-top: 2em;
+    padding-bottom: 4.1em;
+    margin-top: 10px;
     text-align: center;
     @include media($mobile){
       @include span-columns(4);
