@@ -4,6 +4,9 @@
 @import "neat/neat";
 @import "font";
 
+$special_color: #CCC2CD;
+$menu_border_color: #3F382E;
+
 /***********************************************************************************************************
                                               Body
 ************************************************************************************************************/
@@ -36,69 +39,75 @@ header#page{
 }
 
 aside{
-  @include outer-container;
+  @include span-columns(3);
   nav{
     .window{
       width: 100%;
     }
     .menu{
+      background-color: $special_color;
       text-align: center;
       font-size: 1.5em; 
       color: #453833;
-      border-left: #554845 solid 1px;
+      border-color: $menu_border_color;
+      border-style: solid;
+      border-width: 0px 1px 1px 1px;
+      /*border-left: #554845 solid 1px;
       border-right: #554845 solid 1px;
-      border-bottom: #554845 solid 1px;
-      li{padding-top: 10px;}
+      border-bottom: #554845 solid 1px;*/
+      margin-top: -3px;
+      ul{line-height: 1.5}
+      ul li:first{padding-top: 10px;}
+      ul li:last{padding-bottom:10px;}
     }
     a:link {}
     a:visited {}
     a:hover {}
     a:active {} 
-    @include span-columns(3);
-    @include media($mobile){
-      @include span-columns(3);
+  }
+  @include media($mobile){
+      @include span-columns(4);
       margin-left: auto;
       margin-right: auto;
-      float: none;
+      clear:both;
     }
-  }
+}
 
-  section{
-    &.special{
-      @include span-columns(9);
-      text-align: center;
-      float: right;
-      padding-top: 11px;
-
-      #full-special{display:block;}
-      #mobile-special{display:none;}
-
-      @include media($mobile){
-        #full-special{display:none;}
-        #mobile-special{display:block;}
-        @include span-columns(4);
-      }
-      @include omega();
-    }
-    .mission{
-      margin-top: 11px;
-      background-color: #ccc2cd;
-      height: 216px;
-      .title{
-        font-size: 1.8em;
-      }
-      .statement{
-        padding: 20px 15px 0px 15px;
-      }
-    padding-top: 25px;
+section{
+  &.special{
     @include span-columns(9);
     text-align: center;
+    float: right;
+    padding-top: 11px;
+
+    #full-special{display:block;}
+    #mobile-special{display:none;}
+
+    @include media($mobile){
+      #full-special{display:none;}
+      #mobile-special{display:block;}
+      @include span-columns(4);
+    }
     @include omega();
+  }
+  .mission{
+    margin-top: 11px;
+    background-color: #ccc2cd;
+    height: 216px;
+    .title{
+      font-size: 1.8em;
     }
-    .protator{
-      @include span-columns(9);
-      @include omega();
+    .statement{
+      padding: 20px 15px 0px 15px;
     }
+  padding-top: 25px;
+  @include span-columns(9);
+  text-align: center;
+  @include omega();
+  }
+  .protator{
+    @include span-columns(9);
+    @include omega();
   }
 }
 
