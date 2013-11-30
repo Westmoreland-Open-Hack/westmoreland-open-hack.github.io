@@ -184,25 +184,44 @@ p.title{
 footer{
   @include outer-container;
   border-top: black solid 1px;
-  }
+}
 
 .leftCol{
+  @include span-columns(4);
   float:left;
   padding-top: 10px;
   padding-left: 25px;
   padding-bottom: 15px;
+  @include media($mobile) {
+    @include span-columns(2);
+  }
 }
 
 .rightCol{
+  @include span-columns(4);
+  @include omega();
   float:right;
   padding-top: 10px;
   padding-right: 25px;
   padding-bottom: 15px;
+  width: auto;
+  @include media($mobile) {
+    @include span-columns(2);
+    @include omega();
+  }
 }
 
 .facebook{
   text-align: center;
   padding-top: 10px;
+  @include span-columns(4);
+  @include media($mobile) {
+    * {
+      margin:auto;
+    }
+    @include span-columns(4);
+    clear:both;
+  }
 }
 
     /*%a{:href => "http://www.facebook.com/centraltheaterwine"}
