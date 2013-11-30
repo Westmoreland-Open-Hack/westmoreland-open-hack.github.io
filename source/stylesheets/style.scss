@@ -8,7 +8,7 @@
                                               Body
 ************************************************************************************************************/
 body{
- 
+ background-color: tan;
 }
 
 /***********************************************************************************************************
@@ -17,8 +17,15 @@ body{
 .name { 
   font-family: ambrielbold_italic, Arial, sans-serif; 
   text-align: center;
-  font-size: 2.5em;
-  padding: 10px 0px 15px;
+  font-size: 2.9em;
+  padding: 15px 0px 15px;
+}
+
+.facebook{
+  background:transparent url('fbicongray.png') center top no-repeat;
+}
+.facebook:hover{
+  background-image: url('facebookicon.png');
 }
 
 /***********************************************************************************************************
@@ -29,15 +36,26 @@ aside{
   nav{
     .window{
       width: 100%;
-      float: left;
     }
-    .menu{
-      text-align: center;
-      font-size: 1.5em;
-      li{
-        padding-top: 10px;
-      }
+  .menu{
+    text-align: center;
+    font-size: 1.5em; 
+    color: #453833;
+    border-left: #554845 solid 1px;
+    border-right: #554845 solid 1px;
+    border-bottom: #554845 solid 1px;
+    li{
+      padding-top: 10px;
     }
+    }
+    a:link {
+    }
+    a:visited {
+    }
+    a:hover {
+    }
+    a:active {
+    } 
     @include span-columns(3);
     @include media($mobile){
       @include span-columns(3);
@@ -51,6 +69,7 @@ aside{
       @include span-columns(9);
       text-align: center;
       float: left;
+      padding-top: 11px;
 
       #full-special{display:block;}
       #mobile-special{display:none;}
@@ -63,6 +82,16 @@ aside{
       @include omega();
     }
     .mission{
+      margin-top: 11px;
+      background-color: #ccc2cd;
+      height: 216px;
+      .title{
+        font-size: 1.8em;
+      }
+      .statement{
+        padding: 20px 15px 0px 15px;
+      }
+    padding-top: 25px;
     @include span-columns(9);
     text-align: center;
     @include omega();
@@ -83,16 +112,68 @@ main{
   clear: both;
   @include outer-container;
   .storerotator{
-
   }
+
+.flexslider{
+  margin-top: 37px;
+}
+
+
   h1{
   text-align: center;
   font-size: 2em;
   }
   .story{
+    margin-top: 25px;
+    .title{
+      text-align: center;
+      font-size: 1.8em;
+    }
+    .text{
+      text-indent: 1.5em;
+      padding-top: 10px;
+      padding-bottom: 15px;
+    }
     padding-left: 10px;
     padding-right: 10px;
   }
+  .productlist p {
+    font-size: 1.2em;
+    text-align: center;
+  }
+   p.jd{
+    padding-top: 18px;
+  }
+  p.clovercreek{
+    padding-top: 18px;
+  }
+  p.sticky{
+    padding-top: 18px;
+  }
+  p.candle{
+  padding-top: 18px;
+  font-weight: bold;
+  text-decoration: underline;
+  }
+  p.Eric{
+    padding-top: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.productlist{
+  padding-top: 12px;
+  padding-bottom: 25px;
+}
+
+p.title{
+  font-size: 1.6em;
+  font-weight: bold;
+  padding-top: 10px;
+}
+.italic{
+  font-style: italic;
 }
 
 
@@ -102,14 +183,27 @@ main{
 ************************************************************************************************************/
 footer{
   @include outer-container;
+  border-top: black solid 1px;
   }
 
 .leftCol{
   float:left;
+  padding-top: 10px;
   padding-left: 25px;
+  padding-bottom: 15px;
 }
 
 .rightCol{
   float:right;
+  padding-top: 10px;
   padding-right: 25px;
+  padding-bottom: 15px;
 }
+
+.facebook{
+  text-align: center;
+  padding-top: 10px;
+}
+
+    /*%a{:href => "http://www.facebook.com/centraltheaterwine"}
+       %img{:src => "images/facebookicon.png"}*/
