@@ -6,6 +6,7 @@
 
 $special_color: #CCC2CD;
 $menu_border_color: #3F382E;
+$menu_height: 15.1875em;
 
 /***********************************************************************************************************
                                               Body
@@ -90,22 +91,23 @@ section{
     }
     @include omega();
   }
-  .mission{
+  &.mission{
+    @include span-columns(9);
+    min-height:100%;
     margin-top: 11px;
-    background-color: #ccc2cd;
-    height: 216px;
+    background-color: $special_color;
     .title{
       font-size: 1.8em;
     }
     .statement{
       padding: 20px 15px 0px 15px;
     }
-  padding-top: 25px;
-  @include span-columns(9);
-  text-align: center;
-  @include omega();
+    margin-top: 5.1em;
+    padding-top: 25px;
+    text-align: center;
+    @include omega();
   }
-  .protator{
+  &.protator{
     @include span-columns(9);
     @include omega();
   }
