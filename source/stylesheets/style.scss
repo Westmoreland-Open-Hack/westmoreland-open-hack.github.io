@@ -105,10 +105,16 @@ section{
     margin-top: 5.1em;
     padding-top: 25px;
     text-align: center;
+    @include media($mobile){
+      @include span-columns(4);
+    }
     @include omega();
   }
   &.protator{
     @include span-columns(9);
+    @include media($mobile){
+      @include span-columns(4);
+    }
     @include omega();
   }
 }
@@ -121,8 +127,7 @@ section{
 main{
   clear: both;
   @include outer-container;
-  .storerotator{
-  }
+  .storerotator{}
 
 .flexslider{
   margin-top: 37px;
