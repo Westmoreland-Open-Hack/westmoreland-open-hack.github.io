@@ -11,6 +11,7 @@ set :haml, { :ugly => true, :format => :html5 }
 # Page options, layouts, aliases and proxies
 ###
 
+page "/events.html", :layout => "events_layout"
 # Per-page layout changes:
 #
 # With no layout
@@ -50,6 +51,8 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+set :files_dir, 'files'
 
 # Build-specific configuration
 configure :build do

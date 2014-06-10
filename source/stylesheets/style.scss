@@ -33,7 +33,7 @@ body{
 }
 
 /***********************************************************************************************************
-                                 Menu    rightBox: special, mission, protator
+                                 Menu    rightBox: special, mission, protator, erotator
 ************************************************************************************************************/
 header#page{
   @include outer-container;
@@ -80,6 +80,7 @@ section{
     text-align: center;
     float: right;
     padding-top: 11px;
+    margin-top: 37px;
 
     #full-special{display:block;}
     #mobile-special{display:none;}
@@ -94,7 +95,6 @@ section{
   &.mission{
     @include span-columns(9);
     min-height:100%;
-    margin-top: 11px;
     background-color: $special_color;
     .title{
       font-size: 1.8em;
@@ -104,7 +104,7 @@ section{
     }
     padding-top: 2em;
     padding-bottom: 4.1em;
-    margin-top: 10px;
+    margin-top: 43px;
     text-align: center;
     @include media($mobile){
       @include span-columns(4);
@@ -113,6 +113,16 @@ section{
   }
   &.protator{
     @include span-columns(9);
+    @include media($mobile){
+      @include span-columns(4);
+    }
+    @include omega();
+  }
+
+&.erotator{
+    margin-top: 49px;
+    @include span-columns(9);
+    width:71%;
     @include media($mobile){
       @include span-columns(4);
     }
@@ -196,6 +206,36 @@ p.title{
 }
 .italic{
   font-style: italic;
+}
+
+.month{
+  font-family: ambrielbold_italic, Arial, sans-serif; 
+  text-align: center;
+  font-size: 2.2em; 
+}
+
+p.date{
+  text-decoration: underline;
+  font-weight: bold;
+  font-family: Times; 
+  font-size: 1.5em;
+  margin-left: 275px;
+  margin-top: 15px;
+}
+
+p.event{
+  font-family: Times; 
+  font-size: 1.5em;
+  margin-left: 275px;
+  margin-top: 5px;
+}
+
+p.lastEvent{
+  font-family: Times; 
+  font-size: 1.5em;
+  margin-left: 275px;
+  margin-top: 5px;
+  padding-bottom: 25px;
 }
 
 
