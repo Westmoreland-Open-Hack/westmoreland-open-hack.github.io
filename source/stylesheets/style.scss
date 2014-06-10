@@ -7,6 +7,7 @@
 $special_color: #CCC2CD;
 $menu_border_color: #3F382E;
 $menu_height: 15.1875em;
+$purple_font: #5c0e64;
 
 /***********************************************************************************************************
                                               Body
@@ -76,11 +77,15 @@ aside{
 
 section{
   &.special{
+    img{
+      float: left;
+    }
     @include span-columns(9);
     text-align: center;
     float: right;
-    padding-top: 11px;
-    margin-top: 37px;
+    //padding-top: 11px;
+    margin-top: 71px;
+    background-color: $special_color;
 
     #full-special{display:block;}
     #mobile-special{display:none;}
@@ -91,6 +96,21 @@ section{
       @include span-columns(4);
     }
     @include omega();
+
+    p.title{
+      text-align: center;
+      padding-top: 15px;
+      color: $purple_font;
+      font-size: 2.0em;
+    }
+
+    p.wine{
+      text-align: center;
+      padding-top: 15px;
+      color: $purple_font;
+      font-size: 2.0em;
+    }
+
   }
   &.mission{
     @include span-columns(9);
