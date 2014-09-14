@@ -12,6 +12,11 @@
     
     <%= stylesheet_link_tag "normalize", "style" %>
     <%= javascript_include_tag  "all" %>
+    <script>
+      var meetup = {};
+      meetup.APIKey = "<%= data.meetup.apiKey %>"
+      meetup.groupId = <%= data.meetup.groupId %>
+    </script>
   </head>
   
   <body class="<%= page_classes %> site">
