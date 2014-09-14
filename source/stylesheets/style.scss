@@ -9,11 +9,13 @@ $menu_border_color: #3F382E;
 $menu_height: 15.1875em;
 $purple_font: #5c0e64;
 
+$lite-gray: #BCBFC1;
+$title-gray: #A3A7A9;
+
 /***********************************************************************************************************
                                               Body
 ************************************************************************************************************/
 body{
- background-color: tan;
 }
 
 /***********************************************************************************************************
@@ -37,7 +39,106 @@ body{
                                  Menu    rightBox: special, mission, protator, erotator
 ************************************************************************************************************/
 header#page{
+  
+}
+
+.site{
+  line-height:normal;
+  section.content{
+    line-height:1.5em;
+    min-width:40%;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #posts{
+    margin-top:1em;
+    li{
+      list-style: none;
+    }
+    article{
+      margin-left: 2em;
+    }
+  }
+  .highlight{
+    margin-left: 2em;
+  }
+}
+
+header nav{
+  text-transform:capitalize;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  background: #DDDEDF;
+  border-bottom-color: $lite-gray;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-left-color: $lite-gray;
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-right-style: solid;
+  border-right-color: $lite-gray;
+  border-right-width: 2px;
+  ul {
+    font-size: 1.3em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  ul li{
+    margin-left: 1em;
+    margin-right: 1em;
+    display: inline-block;
+    a{
+      text-decoration: none;
+      color:black;
+    }
+    a:visited{
+      color:black;
+    }
+    a:active{
+      color:black;
+      background-color:$lite-gray;
+    }
+    a:hover{
+      background-color:$title-gray;
+    }
+  }
+}
+
+header{
   @include outer-container;
+  h1{
+    margin-bottom: 0px;
+  }
+  .title{
+    text-align: center;
+    background: #38ADE9;
+    font-size: 3em;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    a:visited{
+      color: white;
+    }
+    a:active{
+      color:white
+    }
+  }
+}
+
+h1.title{
+  display:block;
+  border-bottom-color: $title-gray;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-left-color: $lite-gray;
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-right-style: solid;
+  border-right-color: $lite-gray;
+  border-right-width: 2px;
 }
 
 aside{
