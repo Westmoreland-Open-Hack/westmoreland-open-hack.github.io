@@ -11,7 +11,6 @@ set :haml, { :ugly => true, :format => :html5 }
 # Page options, layouts, aliases and proxies
 ###
 
-page "/events.html", :layout => "events_layout"
 # Per-page layout changes:
 #
 # With no layout
