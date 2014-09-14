@@ -11,7 +11,7 @@
   });
 
   function printResults(){
-    $("#events").html();
+    $("#events").html(HandlebarsTemplates['events']({"name": "thing", "venue": "My Place", "time": "now"}));
   };
 
 }(jQuery));
