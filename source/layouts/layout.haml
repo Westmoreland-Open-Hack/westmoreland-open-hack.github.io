@@ -7,7 +7,7 @@
     %meta{content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
     / Use title if it's in the page YAML frontmatter
     %title= current_page.data.title || "Westmoreland Open Hack"
-    = stylesheet_link_tag "normalize", "style"
+    = stylesheet_link_tag "style"
     = javascript_include_tag  "all"
     :javascript
       var meetup = {};
