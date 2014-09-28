@@ -21,3 +21,4 @@ source/javascripts/vendor
 
 
 *.psd
+.ruby-gemset
