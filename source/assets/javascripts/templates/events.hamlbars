@@ -1,7 +1,6 @@
-%article.event
-  .name
-    = hb 'name'
-  .venue
-    = hb 'venue'
-  .time
-    = hb 'time'
+= hb "each events" do
+  %article.event
+    %h2.name= hb 'name'
+    %p<
+      %span.venue= hb 'venue'
+      %span.time= hb 'time'

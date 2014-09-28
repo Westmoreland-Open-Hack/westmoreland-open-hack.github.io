@@ -11,4 +11,8 @@
 
 /* SHARED MODULES */
 
-@import "shared/layout"
+@import "shared/layout";
+@import "shared/header";
+
+/* SECTIONS */
+@import "sections/events";

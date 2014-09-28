@@ -11,7 +11,15 @@
   });
 
   function printResults(){
-    $("#events").html(HandlebarsTemplates['events']({"name": "thing", "venue": "My Place", "time": "now"}));
+    $("#events").html(HandlebarsTemplates['events'](
+      {
+        "events": [
+          {"name": "thing", "venue": "My Place", "time": "October 9th, 2014 @ 9:00PM"},
+          {"name": "thing two", "venue": "Another Place", "time": "November 3rd, 2014 @ 6:00PM"},
+          {"name": "thing the third", "venue": "Hill Valley", "time": "January 1st, 1885 @ 12:00 AM"}
+        ]
+      }
+    ));
   }
 
 }(jQuery));
