@@ -1,0 +1,7 @@
+%article.event
+  .name
+    = hb 'name'
+  .venue
+    = hb 'venue'
+  .time
+    = hb 'time'

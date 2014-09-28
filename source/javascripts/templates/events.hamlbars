@@ -1,7 +1,0 @@
-.event
-  .name
-    {{name}}
-  .venue
-    {{venue}}
-  .time
-    {{time}}

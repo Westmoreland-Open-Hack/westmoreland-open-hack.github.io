@@ -11,6 +11,7 @@ gem 'middleman-livereload', '~> 3.1.0'
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
+gem 'hamlbars'
 gem 'handlebars_assets'
 
 
