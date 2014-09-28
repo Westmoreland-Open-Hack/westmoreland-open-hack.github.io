@@ -17,7 +17,7 @@
 .DS_Store
 
 #ignore bower'd vendor folder
-source/javascripts/vendor
+components
 
 
 *.psd
