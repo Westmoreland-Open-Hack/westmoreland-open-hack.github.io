@@ -1,7 +1,7 @@
 Westmoreland Open Hack
 ========================
 
-## Dependencies:
+## Dependencies
 
 * [middleman](http://middlemanapp.com/)
 * [bower](http://bower.io/)
