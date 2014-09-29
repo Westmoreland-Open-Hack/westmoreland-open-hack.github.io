@@ -1,0 +1,33 @@
+section#events {
+  padding: em(15);
+  
+  article.event {
+    @include span-columns(4);
+    background-color: $light-grey;
+    padding: 0 1.5em;
+    padding-top: 1.5em;
+    padding-bottom: .5em;
+    margin-top: 1em;
+  
+    @include media($b-small) {
+      @include span-columns(4);
+      @include omega(2n);
+    }
+    
+    @include media($b-medium) {
+      @include span-columns(4);
+      @include omega(3n);
+    }
+    
+    @include media($b-large) {
+      @include span-columns(3);
+      @include omega(4n);
+    }
+  
+    .time {
+      @include span-columns(4);
+      font-weight: $light;
+      font-size: .75em;
+    }
+  }
+}

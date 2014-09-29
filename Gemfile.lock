@@ -4,6 +4,13 @@ GEM
     activesupport (3.2.15)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
+    bitters (0.10.1)
+      bourbon (>= 3.2)
+      sass (>= 3.2)
+      thor
+    bourbon (3.2.3)
+      sass (~> 3.2)
+      thor
     chunky_png (1.2.9)
     coffee-script (2.2.0)
       coffee-script-source
@@ -22,6 +29,11 @@ GEM
     ffi (1.9.3)
     fssm (0.2.10)
     haml (4.0.4)
+      tilt
+    hamlbars (2.1.1)
+      execjs (>= 1.2)
+      haml
+      sprockets (>= 2.0)
       tilt
     handlebars_assets (0.18)
       execjs (>= 1.2.9)
@@ -73,6 +85,9 @@ GEM
       sprockets-helpers (~> 1.0.0)
       sprockets-sass (~> 1.0.0)
     multi_json (1.8.2)
+    neat (1.5.0)
+      bourbon (>= 2.1)
+      sass (>= 3.2)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.7.0)
@@ -109,9 +124,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bitters
+  bourbon
+  hamlbars
   handlebars_assets
   middleman (~> 3.1.6)
   middleman-deploy
   middleman-livereload (~> 3.1.0)
+  neat
   ruby18_source_location
   wdm (~> 0.1.0)

@@ -6,7 +6,8 @@
   "main": "index.html",
   "authors": [
     "Paul Scarrone",
-    "Savannah Butler"
+    "Savannah Butler",
+    "Mel Berton"
   ],
   "license": "MIT",
   "private": true,

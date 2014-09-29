@@ -2,18 +2,24 @@
 # the following line to use "https"
 source 'https://rubygems.org'
 
+# General
 gem 'middleman', '~>3.1.6'
 gem 'middleman-deploy'
-
-gem 'handlebars_assets'
-
-# Live-reloading plugin
 gem 'middleman-livereload', '~> 3.1.0'
 
-# For faster file watcher updates on Windows:
-gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw]
+# Assets
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+gem 'hamlbars'
+gem 'handlebars_assets'
 
-# Cross-templating language block fix for Ruby 1.8
+
+# Platform-specific
+platforms :mswin, :mingw do
+  gem 'wdm', '~> 0.1.0' # For faster file watcher updates on Windows
+end
+
 platforms :mri_18 do
-  gem 'ruby18_source_location'
+  gem 'ruby18_source_location' # Cross-templating language block fix for Ruby 1.8
 end

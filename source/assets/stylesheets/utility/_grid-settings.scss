@@ -1,0 +1,14 @@
+@import "neat/neat-helpers";
+
+$gutter: em(8);
+$grid-columns: 4;
+$max-width: em(1024);
+
+//$visual-grid: true;
+
+// BREAKPOINTS
+
+$b-x-small: new-breakpoint(max-width em(400) 4);
+$b-small: new-breakpoint(min-width em(401) max-width em(639) 8);
+$b-medium: new-breakpoint(min-width em(640) max-width em(1024) 12);
+$b-large: new-breakpoint(min-width em(1025) 12);

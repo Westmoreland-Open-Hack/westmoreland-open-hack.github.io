@@ -45,9 +45,9 @@ set :haml, { :ugly => true, :format => :html5 }
 #   end
 # end
 
-set :css_dir, 'stylesheets'
-
-set :js_dir, 'javascripts'
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :fonts_dir, 'assets/fonts'
 
 # Add bower's directory to sprockets asset path
 after_configuration do
