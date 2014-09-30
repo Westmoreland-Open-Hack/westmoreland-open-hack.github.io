@@ -1,0 +1,6 @@
+= hb "each ideas" do
+  %article.idea
+    %h4.title= hb 'title'
+    %p= hb 'description'
+    = hb 'if user' do
+      %cite= hb 'user'
