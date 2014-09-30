@@ -8,6 +8,11 @@
     }).done(function(){
       printResults();
     });
+
+    $.getJSON( "http://woh-ideas.herokuapp.com/idea" ).done(function(data) {
+      //console.log(data);
+      $("#ideas").html(HandlebarsTemplates['ideas']({ "ideas": data } ));
+    });
   });
 
   function printResults(){
