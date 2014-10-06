@@ -4,3 +4,7 @@
     %p= hb 'description'
     = hb 'if user' do
       %cite= hb 'user'
+    = hb 'if voted' do
+      %span.voted Agreed!
+      = hb 'else'
+      %a.vote{ href: "#", hb: 'idHelper' } Agree!
