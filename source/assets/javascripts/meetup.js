@@ -1,5 +1,6 @@
 (function ($) {
   var meetupResults;
+  var userId = userId();
 
   $(function(){
     //http://api.meetup.com/2/events?group_id=13038502&sign=true&key=6330357c7f54114c744c5f33cd122f
@@ -9,10 +10,24 @@
       printResults();
     });
 
-    $.getJSON( "http://woh-ideas.herokuapp.com/idea" ).done(function(data) {
+    $.getJSON( "http://woh-ideas.herokuapp.com/idea/list/"+userId ).done(function(data) {
       //console.log(data);
       $("#ideas").html(HandlebarsTemplates['ideas']({ "ideas": data } ));
     });
+
+    $('#ideas').on('click', 'a.vote', function(e) {
+      e.preventDefault();
+      var vote_link = $(this);
+      var idea = vote_link.data('idea');
+      $.post( "http://woh-ideas.herokuapp.com/vote", { userId: userId, idea: idea }).done(function(data) {
+        if(data.id) {
+          console.log('voted!');
+          vote_link.before('<span class="voted">Agreed!</span>').remove();
+        }
+        else
+          console.log('something went wrong!');
+      });
+    })
   });
 
   function printResults(){
@@ -26,5 +41,16 @@
       }
     ));
   }
+
+  function userId() {
+    var woh_token = $.cookie('woh_token') || uuid.v4();
+    $.cookie('woh_token', woh_token, { expires: 30 });
+    return woh_token;
+  }
+
+  // this is bananas
+  Handlebars.registerHelper('idHelper', function() {
+    return 'data-idea='+this.id;
+  });
 
 }(jQuery));
