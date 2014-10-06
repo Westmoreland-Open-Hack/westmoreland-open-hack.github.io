@@ -844,3 +844,7 @@ section#events {
       /* line 40, /Users/paulscarrone/personalRepos/woh_site/source/assets/stylesheets/neat/grid/_span-columns.scss */
       section#events article.event .time:last-child {
         margin-right: 0; }
+
+/* line 2, /Users/paulscarrone/personalRepos/woh_site/source/assets/stylesheets/sections/_ideas.scss */
+section#ideas a.vote, section#ideas span.voted {
+  display: block; }
