@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
+    "react": "~0.11.2",
     "jquery": "~1.10.2",
     "jquery-migrate": "~1.2.1",
     "handlebars": "~2.0.0",

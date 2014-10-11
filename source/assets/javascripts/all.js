@@ -4,4 +4,5 @@
 //= require node-uuid/uuid
 //= require handlebars/handlebars.runtime.min
 //= require_tree ./templates
-//= require meetup
+//= require react
+//= require react/meetup
