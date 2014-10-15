@@ -36,11 +36,12 @@ var Event = React.createClass({
   render: function(){
     var events = this.props.data.map(function(event){
       var date = new Date(event.time+event.utc_offset).toUTCString()
+      console.log(event)
       return (
         <article className='event'>
-          <h2 className='name'>{event.name}</h2>
+          <h2 className='name'><a href={event.event_url}>{event.name}</a></h2>
           <p>
-            <span className='venue'>{event.venue.name}</span>
+            <span className='venue'>Location: {event.venue.name}</span>
             <span className='time'>{date}</span>
           </p>
         </article>
