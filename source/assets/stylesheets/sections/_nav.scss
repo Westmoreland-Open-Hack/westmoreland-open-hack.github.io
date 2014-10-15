@@ -1,0 +1,16 @@
+nav{
+  border-top: 1px solid black;
+  li{
+    display: inline-block;
+    margin-bottom: em(10);
+    font-size: 1.5em;
+    &:after{
+      content: " |"
+    }
+    &:last-child{
+      &:after{
+        content: ""
+      }
+    }
+  }
+}
