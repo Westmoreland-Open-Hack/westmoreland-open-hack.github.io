@@ -37,6 +37,7 @@ set :haml, { :ugly => true, :format => :html5 }
 
 # Reload the browser automatically whenever files change
  activate :livereload
+ activate :react
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -53,6 +54,7 @@ set :fonts_dir, 'assets/fonts'
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   sprockets.append_path File.join "#{root}", @bower_config["directory"]
+  sprockets.append_path File.dirname(::React::Source.bundled_path_for('react.js'))
 end
 
 # Build-specific configuration
