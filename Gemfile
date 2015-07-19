@@ -13,6 +13,7 @@ gem 'neat'
 gem 'bitters'
 gem 'hamlbars'
 gem 'handlebars_assets'
+gem 'middleman-react', '~> 0.11.1'
 
 
 # Platform-specific
