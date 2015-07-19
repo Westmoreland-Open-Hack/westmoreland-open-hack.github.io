@@ -1,4 +1,7 @@
 header {
   background-color: $light-red;
-  padding: 2.5em em(15);
+  padding: 1.5em em(12) 0;
+  h1 {
+    margin-bottom: 1.5em;
+  }
 }
